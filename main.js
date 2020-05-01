@@ -642,14 +642,14 @@ function setSelected(item, value) {
 			selectedItemIDs.push(i.id);		
 		});
 		else{
-			selectedItemIDs = selectedItemIDs.filter(i => !wholePile(item).includes(i));
+			selectedItemIDs = selectedItemIDs.filter(i => !wholePile(item.id).includes(i));
 		}
   }
   else {
     if(value)
 			selectedItemIDs.push(item.id);		
 		else{
-			selectedItemIDs = selectedItemIDs.filter(i => i !== item);
+			selectedItemIDs = selectedItemIDs.filter(i => i !== item.id);
 		}
   }
 }
